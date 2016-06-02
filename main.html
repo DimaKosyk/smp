@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Notes</title>
+    <meta charset="utf-8">
+    <script src="registr.js"></script>
+    <link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' media='all'>
+	<link rel='stylesheet' href='cover.css' type='text/css' media='all'>
+</head>
+<body onload="getUserName()">
+	<div class='site-wrapper'>
+		<div class='site-wrapper-inner'>
+			<div class='container'>
+				<div class='container col-md-8 col-lg-12'>
+					<div class='inner'><h3 id="person" class='masthead-brand'></h3>
+						<ul class='nav masthead-nav'>
+							<li><a href='request.html'>Show Notes</a></li>
+							<li class='active'><a href='main.html'>Add Note</a></li>
+							<li><a href='logOut.php'>Log Out</a></li>
+						</ul>
+					</div>
+				</div>
+			</div><br/>
+    <div class="container">
+	 <div class="jumbotron">
+    <div class="row">
+            <div style="width:60%" class="container">
+                <form action="addNote.php" method="POST" class="form" role="form">
+                  <div class="form-group col-md-12 has-error">
+                    <label for="inputTitle" id="inputTitleLabel"  class="col-sm-3 control-label">Заголовок</label>
+                    <div class="col-sm-10">
+                      <input autofocus type="text" name="title" onchange="ckeckNote(document.forms[0])"  class="form-control" id="inputTitle" placeholder="Заголовок заметки">
+                    </div>
+					 <p class="help-block"></p>
+                  </div>
+                  <div class="form-group has-error col-xs-12">
+                    <label for="inputContent" class="col-sm-3 control-label">Заметка</label>
+                    <div class="col-sm-10">
+                      <textarea class="form-control" id="inputContent" name="content" rows="15" cols="40"> </textarea>
+                    </div>
+                  </div>
+				  <span class="container col-xs-2"></span>
+                  <div class="form-group">
+                    <div class="container col-md-6">
+                      <button type="submit" class="btn btn-warning">Добавить</button>
+                    </div>
+                  </div>
+                </form>
+            </div>
+    </div>
+    </div>
+	</div>
+	</div>
+	</div>
+</body>
+</html>
